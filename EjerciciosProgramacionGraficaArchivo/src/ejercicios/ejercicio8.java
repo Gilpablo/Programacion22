@@ -54,14 +54,19 @@ public class ejercicio8 extends JFrame {
 	    	}  
 	    }
 	    
-	    int fila = 0;
-	    int columna = 0;
-	    int cont2 =0;
+	    int contColumna =0;
+	    int contFila =0;
 	    
 	    
 	    for (int i = 0; i < 10; i++) {
-	    	table.setValueAt(numbers[i], fila, columna+cont2);
-	    	cont2 = cont2 +  1;
+	    	contFila = contFila +1;
+	    	for (int j = 0; j < 10; j++) {
+	    		System.out.println(contFila);
+	    		table.setValueAt(numbers[j], contFila, contColumna);
+		    	contColumna = contColumna +  1;
+		    	
+			}
+	    	
 		}
 	    
 	
@@ -93,6 +98,15 @@ public class ejercicio8 extends JFrame {
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
+				{null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null},
 				{null, null, null, null, null, null, null, null, null, null},
 			},
 			new String[] {
