@@ -223,51 +223,121 @@ public class bucles1 {
 		
 		//EJERCICO 13
 		
+//		
+//		System.out.println("Piensa un numero del 1 al 100 y dime si es mayor, menor o igual.");
+//		
+//		Scanner leer = new Scanner (System.in);
+//		
+//			
+//		
+//		
+//		String con = "";
+//		
+//		int mayor = 100;
+//		int menor = 1;
+//		
+//		int numAleatorio = (int)(Math.random()*(mayor-menor+1)+menor);
+//		
+//		System.out.println(numAleatorio);
+//				
+//		String contestacion = leer.next();
+//		
+//		while (!contestacion.equalsIgnoreCase("igual")) {
+//			
+//			if (contestacion.equalsIgnoreCase("mayor")) {
+//				
+//				menor = numAleatorio;
+//				
+//				numAleatorio = (int)(Math.random()*(mayor-menor+1)+menor);
+//				
+//				System.out.println(numAleatorio);
+//				
+//				contestacion = leer.next();			
+//				
+//			}else if (contestacion.equalsIgnoreCase("menor")) {
+//				
+//				mayor = numAleatorio;
+//				
+//				numAleatorio = (int)(Math.random()*(mayor-menor+1)+menor);
+//				
+//				System.out.println(numAleatorio);
+//				
+//				contestacion = leer.next();
+//											
+//			}else {
+//				
+//				System.out.println("Escribe la palabra bien");
+//				
+//				contestacion = leer.next();
+//				
+//			}
+//			
+//			
+//		}
+//		
+//		
+//		System.out.println("Soy un genio");
+	
 		
-		System.out.println("Piensa un numero del 1 al 100 y dime si es mayor, menor o igual.");
+
+		//EJERCICIO 14
+		
+		
+		System.out.println("Introduce un dinero (múltiplo de 5)");
 		
 		Scanner leer = new Scanner (System.in);
 		
-		int numAleatorio = (int)(Math.random()*(100-1+1)+1);
-			
-		System.out.println(numAleatorio);
+		int dinero = leer.nextInt();
 		
-			String con = "";
+		int bill500 = 0;
+		int bill200 = 0;
+		int bill100 = 0;
+		int bill50 = 0;
+		int bill20 = 0;
+		int bill10 = 0;
+		int bill5 = 0;
 		
-		do {
+		while (dinero%5!=0) {
 			
-			String contestacion = leer.next();
+			System.out.println("Este número no es múltiplo de 5");
 			
-			int numAleatorio1;
+			dinero = leer.nextInt();
 			
-			switch (contestacion) {
+		}
+		
 			
-			case "mayor":
-				numAleatorio1 = (int)(Math.random()*(100-numAleatorio+1)+numAleatorio);
-				System.out.println(numAleatorio1);
-				
-				break;
-			case "menor":
-				
-				numAleatorio1 = (int)(Math.random()*(numAleatorio-1+1)+1);
-				System.out.println(numAleatorio1);
-							
-				break;
-							
-			case "igual":
-				
-				break;
-
+		System.out.println("-------------------------------------");
+		
+		while (dinero != 0) {
+			
+			if (dinero>=500) {
+				dinero=dinero-500;
+				bill500 = bill500 +1;
+			}else if (dinero>=200) {
+				dinero=dinero-200;
+				bill200 = bill200 +1;
+			}else if (dinero>=100) {
+				dinero=dinero-100;
+				bill100 = bill100 +1;
+			}else if (dinero>=50) {
+				dinero=dinero-50;
+				bill50 = bill50 +1;
+			}else if (dinero>=20) {
+				dinero=dinero-20;
+				bill20 = bill20 +1;
+			}else if (dinero>=10) {
+				dinero=dinero-10;
+				bill10 = bill10 +1;
+			}else if (dinero>=5) {
+				dinero=dinero-5;
+				bill5 = bill5 +1;
 			}
 			
-			
-		} while (con == "igual");
+		}
 		
 		
 		
-		
-			
-		
+		System.out.println("Se necesitan: " + bill500 + " billetes de 500€, " + bill200 + " billetes de 200€, " + bill100 + " billetes de 100€, " + bill50 + " billetes de 50€, " + bill20 + " billetes de 20€, " + bill10 + " billetes de 10€, " + bill5 + " billetes de 5€." );
 		
 		
 		
