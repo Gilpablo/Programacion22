@@ -15,7 +15,18 @@ public class Arrays1Main {
 		
 		//Arrays1Ejercicios.ejercicio6();
 		
-		Arrays1Ejercicios.ejercicio7();
+		//Arrays1Ejercicios.ejercicio7();
+		
+		//Arrays1Ejercicios.ejercicio8();
+		
+		//Arrays1Ejercicios.ejercicio9();
+		
+		//Arrays1Ejercicios.ejercicio10();
+		
+		//Arrays1Ejercicios.ejercicio11();
+		
+		Arrays1Ejercicios.ejercicio12();
+
 		
 		
 	}
